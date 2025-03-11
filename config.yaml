@@ -1,0 +1,6 @@
+port: 1037
+timeout: 5s
+storage_path: "binary_files"
+create_limit: 10
+get_limit: 10
+list_limit: 100
