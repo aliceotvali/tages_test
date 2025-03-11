@@ -8,6 +8,7 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
+	"sync"
 	"tages/config"
 	pb "tages/grpc_service/files.service"
 	"tages/service"
@@ -23,6 +24,7 @@ type Server struct {
 	CreateLimit *semaphore.Weighted
 	GetLimit    *semaphore.Weighted
 	ListLimit   *semaphore.Weighted
+	mutex       sync.RWMutex
 
 	FileService service.IFileService
 
@@ -48,6 +50,8 @@ func (s *Server) Create(stream pb.FileService_CreateServer) error {
 
 	file := FileInfo{}
 
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
 	for {
 		// получаем данные запроса.
 		req, err := stream.Recv()
@@ -113,6 +117,8 @@ func (s *Server) List(ctx context.Context, _ *emptypb.Empty) (*pb.ListResponse, 
 	}
 	defer s.ListLimit.Release(1)
 
+	s.mutex.RLock()
+	defer s.mutex.RUnlock()
 	files, err := s.FileService.List()
 	if err != nil {
 		slog.Error("get list of files")
@@ -156,6 +162,8 @@ func (s *Server) Get(req *pb.GetRequest, server pb.FileService_GetServer) error 
 		s.GetLimit.Release(1)
 	}()
 
+	s.mutex.RLock()
+	defer s.mutex.RUnlock()
 	buf := make([]byte, 2048)
 	for {
 		n, err := file.Read(buf)
