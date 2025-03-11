@@ -1,1 +1,1 @@
-protoc -I internal internal/protos/tages_test.files.service/file.proto --go_out=internal/grpc_service --go-grpc_out=internal/grpc_service
+protoc -I internal internal/protos/tages_test/fileservice/file.proto --go_out=internal/grpc_service --go-grpc_out=internal/grpc_service

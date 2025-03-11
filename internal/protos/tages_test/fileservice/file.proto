@@ -4,7 +4,7 @@ package fileservice;
 
 import "google/protobuf/empty.proto";
 
-option go_package = "files.service";
+option go_package = "tages.fileservice";
 
 service FileService {
     rpc List(google.protobuf.Empty) returns (ListResponse) {
