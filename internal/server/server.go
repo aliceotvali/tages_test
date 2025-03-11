@@ -9,8 +9,8 @@ import (
 	"os"
 	"path/filepath"
 	"tages/config"
-	pb "tages/grpc_service/files.service"
-	"tages/service"
+	pb "tages/internal/grpc_service/files.service"
+	"tages/internal/service"
 
 	"golang.org/x/sync/semaphore"
 
@@ -120,7 +120,13 @@ func (s *Server) List(ctx context.Context, _ *emptypb.Empty) (*pb.ListResponse, 
 		return nil, errors.New("get list of files")
 	}
 
-	return &pb.ListResponse{Files: files}, nil
+	pbFileInfos := make([]*pb.FileInfo, 0, len(files))
+
+	for i := range files {
+		pbFileInfos = append(pbFileInfos, files[i].ToGRPC())
+	}
+
+	return &pb.ListResponse{Files: pbFileInfos}, nil
 }
 
 // Get получает загруженный файл.

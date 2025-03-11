@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.35.2
 // 	protoc        v5.28.2
-// source: file.proto
+// source: protos/tages_test.files.service/file.proto
 
 package files_service
 
@@ -32,7 +32,7 @@ type CreateRequest struct {
 
 func (x *CreateRequest) Reset() {
 	*x = CreateRequest{}
-	mi := &file_file_proto_msgTypes[0]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -44,7 +44,7 @@ func (x *CreateRequest) String() string {
 func (*CreateRequest) ProtoMessage() {}
 
 func (x *CreateRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_file_proto_msgTypes[0]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -57,7 +57,7 @@ func (x *CreateRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateRequest.ProtoReflect.Descriptor instead.
 func (*CreateRequest) Descriptor() ([]byte, []int) {
-	return file_file_proto_rawDescGZIP(), []int{0}
+	return file_protos_tages_test_files_service_file_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CreateRequest) GetFilename() string {
@@ -84,7 +84,7 @@ type CreateResponse struct {
 
 func (x *CreateResponse) Reset() {
 	*x = CreateResponse{}
-	mi := &file_file_proto_msgTypes[1]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -96,7 +96,7 @@ func (x *CreateResponse) String() string {
 func (*CreateResponse) ProtoMessage() {}
 
 func (x *CreateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_file_proto_msgTypes[1]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -109,7 +109,7 @@ func (x *CreateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateResponse.ProtoReflect.Descriptor instead.
 func (*CreateResponse) Descriptor() ([]byte, []int) {
-	return file_file_proto_rawDescGZIP(), []int{1}
+	return file_protos_tages_test_files_service_file_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *CreateResponse) GetFilename() string {
@@ -129,7 +129,7 @@ type GetRequest struct {
 
 func (x *GetRequest) Reset() {
 	*x = GetRequest{}
-	mi := &file_file_proto_msgTypes[2]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -141,7 +141,7 @@ func (x *GetRequest) String() string {
 func (*GetRequest) ProtoMessage() {}
 
 func (x *GetRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_file_proto_msgTypes[2]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -154,7 +154,7 @@ func (x *GetRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetRequest.ProtoReflect.Descriptor instead.
 func (*GetRequest) Descriptor() ([]byte, []int) {
-	return file_file_proto_rawDescGZIP(), []int{2}
+	return file_protos_tages_test_files_service_file_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *GetRequest) GetFilename() string {
@@ -174,7 +174,7 @@ type GetResponse struct {
 
 func (x *GetResponse) Reset() {
 	*x = GetResponse{}
-	mi := &file_file_proto_msgTypes[3]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -186,7 +186,7 @@ func (x *GetResponse) String() string {
 func (*GetResponse) ProtoMessage() {}
 
 func (x *GetResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_file_proto_msgTypes[3]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -199,7 +199,7 @@ func (x *GetResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetResponse.ProtoReflect.Descriptor instead.
 func (*GetResponse) Descriptor() ([]byte, []int) {
-	return file_file_proto_rawDescGZIP(), []int{3}
+	return file_protos_tages_test_files_service_file_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *GetResponse) GetData() []byte {
@@ -221,7 +221,7 @@ type FileInfo struct {
 
 func (x *FileInfo) Reset() {
 	*x = FileInfo{}
-	mi := &file_file_proto_msgTypes[4]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -233,7 +233,7 @@ func (x *FileInfo) String() string {
 func (*FileInfo) ProtoMessage() {}
 
 func (x *FileInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_file_proto_msgTypes[4]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -246,7 +246,7 @@ func (x *FileInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FileInfo.ProtoReflect.Descriptor instead.
 func (*FileInfo) Descriptor() ([]byte, []int) {
-	return file_file_proto_rawDescGZIP(), []int{4}
+	return file_protos_tages_test_files_service_file_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *FileInfo) GetName() string {
@@ -280,7 +280,7 @@ type ListResponse struct {
 
 func (x *ListResponse) Reset() {
 	*x = ListResponse{}
-	mi := &file_file_proto_msgTypes[5]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -292,7 +292,7 @@ func (x *ListResponse) String() string {
 func (*ListResponse) ProtoMessage() {}
 
 func (x *ListResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_file_proto_msgTypes[5]
+	mi := &file_protos_tages_test_files_service_file_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -305,7 +305,7 @@ func (x *ListResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListResponse.ProtoReflect.Descriptor instead.
 func (*ListResponse) Descriptor() ([]byte, []int) {
-	return file_file_proto_rawDescGZIP(), []int{5}
+	return file_protos_tages_test_files_service_file_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *ListResponse) GetFiles() []*FileInfo {
@@ -315,10 +315,12 @@ func (x *ListResponse) GetFiles() []*FileInfo {
 	return nil
 }
 
-var File_file_proto protoreflect.FileDescriptor
+var File_protos_tages_test_files_service_file_proto protoreflect.FileDescriptor
 
-var file_file_proto_rawDesc = []byte{
-	0x0a, 0x0a, 0x66, 0x69, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0b, 0x66, 0x69,
+var file_protos_tages_test_files_service_file_proto_rawDesc = []byte{
+	0x0a, 0x2a, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x73, 0x2f, 0x74, 0x61, 0x67, 0x65, 0x73, 0x5f, 0x74,
+	0x65, 0x73, 0x74, 0x2e, 0x66, 0x69, 0x6c, 0x65, 0x73, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x2f, 0x66, 0x69, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0b, 0x66, 0x69,
 	0x6c, 0x65, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x1a, 0x1b, 0x67, 0x6f, 0x6f, 0x67, 0x6c,
 	0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x65, 0x6d, 0x70, 0x74, 0x79,
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x3f, 0x0a, 0x0d, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
@@ -361,19 +363,19 @@ var file_file_proto_rawDesc = []byte{
 }
 
 var (
-	file_file_proto_rawDescOnce sync.Once
-	file_file_proto_rawDescData = file_file_proto_rawDesc
+	file_protos_tages_test_files_service_file_proto_rawDescOnce sync.Once
+	file_protos_tages_test_files_service_file_proto_rawDescData = file_protos_tages_test_files_service_file_proto_rawDesc
 )
 
-func file_file_proto_rawDescGZIP() []byte {
-	file_file_proto_rawDescOnce.Do(func() {
-		file_file_proto_rawDescData = protoimpl.X.CompressGZIP(file_file_proto_rawDescData)
+func file_protos_tages_test_files_service_file_proto_rawDescGZIP() []byte {
+	file_protos_tages_test_files_service_file_proto_rawDescOnce.Do(func() {
+		file_protos_tages_test_files_service_file_proto_rawDescData = protoimpl.X.CompressGZIP(file_protos_tages_test_files_service_file_proto_rawDescData)
 	})
-	return file_file_proto_rawDescData
+	return file_protos_tages_test_files_service_file_proto_rawDescData
 }
 
-var file_file_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
-var file_file_proto_goTypes = []any{
+var file_protos_tages_test_files_service_file_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_protos_tages_test_files_service_file_proto_goTypes = []any{
 	(*CreateRequest)(nil),  // 0: fileservice.CreateRequest
 	(*CreateResponse)(nil), // 1: fileservice.CreateResponse
 	(*GetRequest)(nil),     // 2: fileservice.GetRequest
@@ -382,7 +384,7 @@ var file_file_proto_goTypes = []any{
 	(*ListResponse)(nil),   // 5: fileservice.ListResponse
 	(*emptypb.Empty)(nil),  // 6: google.protobuf.Empty
 }
-var file_file_proto_depIdxs = []int32{
+var file_protos_tages_test_files_service_file_proto_depIdxs = []int32{
 	4, // 0: fileservice.ListResponse.files:type_name -> fileservice.FileInfo
 	6, // 1: fileservice.FileService.List:input_type -> google.protobuf.Empty
 	2, // 2: fileservice.FileService.Get:input_type -> fileservice.GetRequest
@@ -397,27 +399,27 @@ var file_file_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_file_proto_init() }
-func file_file_proto_init() {
-	if File_file_proto != nil {
+func init() { file_protos_tages_test_files_service_file_proto_init() }
+func file_protos_tages_test_files_service_file_proto_init() {
+	if File_protos_tages_test_files_service_file_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_file_proto_rawDesc,
+			RawDescriptor: file_protos_tages_test_files_service_file_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_file_proto_goTypes,
-		DependencyIndexes: file_file_proto_depIdxs,
-		MessageInfos:      file_file_proto_msgTypes,
+		GoTypes:           file_protos_tages_test_files_service_file_proto_goTypes,
+		DependencyIndexes: file_protos_tages_test_files_service_file_proto_depIdxs,
+		MessageInfos:      file_protos_tages_test_files_service_file_proto_msgTypes,
 	}.Build()
-	File_file_proto = out.File
-	file_file_proto_rawDesc = nil
-	file_file_proto_goTypes = nil
-	file_file_proto_depIdxs = nil
+	File_protos_tages_test_files_service_file_proto = out.File
+	file_protos_tages_test_files_service_file_proto_rawDesc = nil
+	file_protos_tages_test_files_service_file_proto_goTypes = nil
+	file_protos_tages_test_files_service_file_proto_depIdxs = nil
 }

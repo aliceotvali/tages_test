@@ -10,9 +10,9 @@ import (
 	"syscall"
 
 	"tages/config"
-	pb "tages/grpc_service/files.service"
-	"tages/server"
-	"tages/service"
+	pb "tages/internal/grpc_service/files.service"
+	"tages/internal/server"
+	"tages/internal/service"
 
 	"golang.org/x/sync/semaphore"
 
